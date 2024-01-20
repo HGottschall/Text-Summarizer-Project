@@ -1,1 +1,10 @@
-key: value
+TrainingArguments:
+  num_train_epochs: 1 # Número de épocas de treinamento
+  warmup_steps: 500 # Número de passos de aquecimento
+  per_device_train_batch_size: 1 # Tamanho do lote de treinamento por dispositivo
+  weight_decay: 0.01 # Decaimento de peso
+  logging_steps: 10 # Número de passos de registro
+  evaluation_strategy: steps # Estratégia de avaliação
+  eval_steps: 500 # Número de passos de avaliação
+  save_steps: 10000 # Número de passos de salvamento (1e6)
+  gradient_accumulation_steps: 64 # Número de passos de acumulação de gradiente
